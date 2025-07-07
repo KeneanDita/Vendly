@@ -1,0 +1,24 @@
+{% extends 'core:base.html' %}
+
+{% block title %}Dashboard {% endblock %}
+
+{% block content %}
+<div class="mt-6 px-6 py-12 bg-gray-100 rounded-xl">
+    <h2 class="mb-12 text-2xl text-center font-bold">Newest Items</h2>
+
+    <div class="grid grid-cols-3 gap-3">
+        {% for item in items %}
+        <div>
+            <a href="{% url 'items:detail' item.pk %}">
+        <div class="bg-white rounded-lg shadow-md p-4">
+            <img src="{{ item.image.url }}" alt="{{ item.name }}" class="w-full h-48 object-cover rounded-t-lg">
+            <h3 class="text-lg font-semibold mt-2">{{ item.name }}</h3>
+            <p class="text-gray-600">{{ item.description|truncatewords:20 }}</p>
+            <p class="text-xl font-bold mt-2">${{ item.price }}</p>
+        </div>
+        </a>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
