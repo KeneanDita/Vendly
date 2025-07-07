@@ -5,5 +5,5 @@ from django.contrib.auth import views as auth_views
 app_name = 'dashboard'
 
 urlpatterns = [
-    path('dashboard/', views.index, name='index'),
+    path('', views.index, name='index'),
     ]
