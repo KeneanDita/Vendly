@@ -19,7 +19,7 @@
             <div class="mt-6 p-6 bg-white rounded-xl">
                 <p>This is your item!</p>
 
-                <a href="{% url 'irem:delete' item.id %}" class="inline-block mt-6 px-6 py-3 text-lg font-semibold bg-red-500 text-white">Delete</a>
+                <a href="{% url 'items:delete' item.id %}" class="inline-block mt-6 px-6 py-3 text-lg font-semibold bg-red-500 text-white rounded-xl">Delete</a>
             </div>
         {% else %}
             <a href="#" class="inline-block mt-6 px-6 py-3 text-lg rounded-xl font-semibold bg-teal-500 text-white hover:bg-gray-700 ">Contact Seller</a>
