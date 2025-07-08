@@ -9,7 +9,19 @@
 
             <button class="mt-2 py-4 px-8 text-lg bg-teal-500 text-white rounded-xl hover:bg-teal-700">Search</button>
         </form>
+
+        <hr class="my-6">
+        <p class="font-semibold">Categories</p>
+        <ul>
+        {% for category in categories %}
+        <li class="py2 px-2 rounded-xl">
+            <a href="{% url 'items:items' %}?query={{ query }}&category={{ category.id}}">{{ category.name}}</a>
+        </li>
+        {% endfor %}
+    </ul>
     </div>
+    
+
     <div class="col-span-3 p-2">
         <div class="grid grid-cols-3 gap-3">
         {% for item in items %}
