@@ -14,7 +14,7 @@
         <p class="font-semibold">Categories</p>
         <ul>
         {% for category in categories %}
-        <li class="py2 px-2 rounded-xl">
+        <li class="py2 px-2 rounded-xl {% if category.id == category_id %} bg-gray-200{% endif %}">
             <a href="{% url 'items:items' %}?query={{ query }}&category={{ category.id}}">{{ category.name}}</a>
         </li>
         {% endfor %}
