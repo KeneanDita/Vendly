@@ -11,14 +11,14 @@
         </form>
         <hr class="my-3">
         <p class="font-semibold">Categories</p>
-        <ul>  
+        <ul>
         {% for category in categories %}
         <li class="py-2 px-2 rounded-xl {% if category.id == category_id %} bg-gray-400{% endif %}">
             <a href="{% url 'items:items' %}?query={{ query }}&category={{ category.id}}">{{ category.name}}</a>
         </li>
         {% endfor %}
     </ul>
-    
+
         <hr class="my-3">
         <p class="font-semibold">Clear filters</p>
         <ul>
@@ -27,7 +27,6 @@
             </li>
         </ul>
     </div>
-    
 
     <div class="col-span-3 p-2 bg-gray-100">
         <div class="grid grid-cols-3 gap-3">
