@@ -10,7 +10,7 @@
     <div class="col-span-2 p-6 bg-gray-100 rounded-xl">
         <h1 class="mb-6 text-3xl font-bold">{{ item.name }}</h1>
         <p class="text-gray-500"><strong>Category: </strong>{{ item.category.name }}</p>
-        <p class="text-gray-500"><strong>Price: </strong>{{ item.price }}</p>
+        <p class="text-gray-500"><strong>Price: $</strong>{{ item.price }}</p>
         <p class="text-gray-500"><strong>Seller: </strong>{{ item.created_by }}</p>
         {% if item.description %}
         <p class="text-gray-500"><strong>Description: </strong><br>{{ item.description }}</p>
