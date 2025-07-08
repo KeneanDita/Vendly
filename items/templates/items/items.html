@@ -7,22 +7,29 @@
         <form action="{% url 'items:items' %}">
             <input name="query" class="w-full py-4 px-6 border rounded-xl bg-white" type="text" value="{{ query }}" placeholder="Find a Sticker, Clothing or Electronics...">
 
-            <button class="mt-2 py-4 px-8 text-lg bg-teal-500 text-white rounded-xl hover:bg-teal-700">Search</button>
+            <button class="mt-4 py-4 px-8 text-lg bg-teal-500 text-white rounded-xl hover:bg-teal-700">Search</button>
         </form>
-
-        <hr class="my-6">
+        <hr class="my-3">
         <p class="font-semibold">Categories</p>
-        <ul>
+        <ul>  
         {% for category in categories %}
-        <li class="py2 px-2 rounded-xl {% if category.id == category_id %} bg-gray-200{% endif %}">
+        <li class="py-2 px-2 rounded-xl {% if category.id == category_id %} bg-gray-400{% endif %}">
             <a href="{% url 'items:items' %}?query={{ query }}&category={{ category.id}}">{{ category.name}}</a>
         </li>
         {% endfor %}
     </ul>
+    
+        <hr class="my-3">
+        <p class="font-semibold">Clear filters</p>
+        <ul>
+            <li>
+                <a href="{% url 'items:items' %}" class="mt-2 py-4 px-8 inline-block bg-yellow-500 text-lg rounded-xl text-white">Clear</a>
+            </li>
+        </ul>
     </div>
     
 
-    <div class="col-span-3 p-2">
+    <div class="col-span-3 p-2 bg-gray-100">
         <div class="grid grid-cols-3 gap-3">
         {% for item in items %}
         <div>
