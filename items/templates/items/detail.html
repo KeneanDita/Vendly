@@ -8,12 +8,12 @@
         <img src="{{ item.image.url }}" class="rounded-xl">
     </div>
     <div class="col-span-2 p-6 bg-gray-100 rounded-xl">
-        <h1 class="mb-6 text-3xl font-bold">{{ item.name }}</h1>
-        <p class="text-gray-500"><strong>Category: </strong>{{ item.category.name }}</p>
-        <p class="text-gray-500"><strong>Price: $</strong>{{ item.price }}</p>
-        <p class="text-gray-500"><strong>Seller: </strong>{{ item.created_by }}</p>
+        <h1 class="mb-6 text-3xl font-bold ">{{ item.name }}</h1>
+        <p class="text-gray-500 text-xl py-2"><strong>Category: </strong>{{ item.category.name }}</p>
+        <p class="text-gray-500 text-xl py-2"><strong>Price: $</strong>{{ item.price }}</p>
+        <p class="text-gray-500 text-xl py-2"><strong>Seller: </strong>{{ item.created_by }}</p>
         {% if item.description %}
-        <p class="text-gray-500"><strong>Description: </strong><br>{{ item.description }}</p>
+        <p class="text-gray-500 text-xl"><strong>Description: </strong><br>{{ item.description }}</p>
         {% endif %}
         {% if request.user == item.created_by %}
             <div class="mt-6 p-6 bg-white rounded-xl">
