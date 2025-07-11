@@ -28,7 +28,7 @@ def new_conversation(request, item_pk):
             
             return redirect('items:detail', pk=item_pk)
     else:
-        form = ConversationMessageForm
+        form = ConversationMessageForm()
     
     return render(request, 'conversation/new.html',{
         'form':form,
