@@ -11,7 +11,7 @@ def new_conversation(request, item_pk):
     conversations = Conversation.objects.filter(item=item).filter(members__in=[request.user.id])
     
     if conversations:
-        pass #Letera style comit
+        pass #Letera style commit silly for got to add 1 m
     if request.method == "POST":
         form = ConversationMessageForm(request.POST)
 
