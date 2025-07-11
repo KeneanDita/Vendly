@@ -23,7 +23,7 @@ def new_conversation(request, item_pk):
             
             conversation_message = form.save(commit=False)
             conversation_message.conversation = conversation
-            conversation_message.created_by - request.user
+            conversation_message.created_by = request.user
             conversation_message.save()
             
             return redirect('items:detail', pk=item_pk)
