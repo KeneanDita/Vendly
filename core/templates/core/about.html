@@ -1,0 +1,36 @@
+{% extends "core/base.html" %}
+
+{% block title%}
+    About us
+{% endblock %}
+{% block content %}
+<div class="max-w-3xl mx-auto py-12 px-6">
+    <h1 class="text-4xl font-bold text-gray-900 mb-6">About Vendly</h1>
+    <p class="text-lg text-gray-700 mb-4">
+        Vendly is your trusted partner in seamless online shopping. Our mission is to connect buyers and sellers through a secure, user-friendly platform powered by the latest technology.
+    </p>
+    <p class="text-lg text-gray-700 mb-4">
+        Founded by a person passionate about e-commerce, Vendly offers a wide range of products, fast delivery, and excellent customer service. We believe in empowering small businesses and providing customers with the best shopping experience.
+    </p>
+    <p class="text-lg text-gray-700 mb-4">
+        Built with Django and styled with Tailwind CSS, our site is designed for speed, reliability, and ease of use. Thank you for choosing Vendly!
+    </p>
+    <p class="text-lg text-gray-700 mb-4">
+        At Vendly, we prioritize security and privacy, ensuring that every transaction is protected and your personal information remains confidential.
+    </p>
+    <p class="text-lg text-gray-700 mb-4">
+        We are constantly innovating, adding new features and improving our services based on customer feedback. Our dedicated support team is always ready to assist you with any questions or concerns.
+    </p>
+    <p class="text-lg text-gray-700 mb-4">
+        Sustainability matters to us. Vendly partners with eco-friendly suppliers and encourages responsible shopping to help reduce environmental impact.
+    </p>
+    <p class="text-lg text-gray-700 mb-4">
+        Join our growing community of buyers and sellers and experience the future of e-commerce with Vendly. We look forward to serving you!
+    </p>
+    <div class="mt-8">
+        <a href="{% url 'core:contact' %}" class="inline-block bg-teal-500 text-white px-6 py-3 rounded-xl hover:bg-teal-700 transition">
+            Contact Us
+        </a>
+    </div>
+</div>
+{% endblock %}
