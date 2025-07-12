@@ -9,7 +9,8 @@ class LoginForm(AuthenticationForm):
     }))
     password = forms.CharField(widget=forms.TextInput(attrs={
         'placeholder': 'Your Password',
-        'class': 'w-full py-4 px-6 rounded-xl bg-white'
+        'class': 'w-full py-4 px-6 rounded-xl bg-white',
+        'type': 'password'
     }))
     
     
@@ -28,9 +29,11 @@ class SignupForm(UserCreationForm):
     }))
     password1 = forms.CharField(widget=forms.TextInput(attrs={
         'placeholder': 'Enter a Password',
-        'class': 'w-full py-4 px-6 rounded-xl bg-white'
+        'class': 'w-full py-4 px-6 rounded-xl bg-white',
+        'type': 'password'
     }))
     password2 = forms.CharField(widget=forms.TextInput(attrs={
         'placeholder': 'Cpnfirm Your Password',
-        'class': 'w-full py-4 px-6 rounded-xl bg-white'
+        'class': 'w-full py-4 px-6 rounded-xl bg-white',
+        'type': 'password'
     }))
