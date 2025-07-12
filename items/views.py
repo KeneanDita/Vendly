@@ -32,6 +32,14 @@ def detail(request, pk):
     
     return render(request, 'items/detail.html', {'item': item, 'related_items': related_items})
 
+def category_items(request, category_id):
+    category = get_object_or_404(Category, pk=category_id)
+    items = Item.objects.filter(category=category, is_sold=False)
+    return render(request, 'items/category_items.html', {
+        'category': category,
+        'items': items,
+    })
+
 @login_required
 def new(request):
     if request.method == 'POST':
