@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from items.models import Item, Category
 from .forms import SignupForm
+from django.contrib.auth import logout as auth_logout
 
 
 def index(request):
@@ -32,4 +33,8 @@ def signup(request):
     else:
         form = SignupForm()
     return render(request, "core/signup.html", {"form": form})
+
+def logout(request):
+    auth_logout(request)
+    return redirect('/')
 
