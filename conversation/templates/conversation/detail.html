@@ -17,11 +17,18 @@
     {% endfor %}
 </div>
 
-<form action="." method="post" class="mt-6" placeholder="Type your message here...">
+
+<form method="post">
     {% csrf_token %}
-    
     {{ form.as_p }}
-    <button type="submit" class="mt-4 bg-teal-500 text-white px-6 py-3 rounded-xl">Send</button>
+    <button type="submit" class="mt-4 bg-teal-500 text-white px-6 py-3 rounded-xl hover:bg-teal-700" name="send_message">Send Message</button>
+</form>
+
+<form method="post" style="margin-top: 20px;">
+    {% csrf_token %}
+    <button type="submit" class="mt-4 bg-red-500 text-white px-6 py-3 rounded-xl hover:bg-red-700" name="delete_conversation" onclick="return confirm('Are you sure you want to delete this conversation?');">
+        Delete Conversation
+    </button>
 </form>
 
 {% endblock %}
