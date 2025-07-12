@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Inbox{% endblock %}
+{% block content %}
+
+<h1 class="mb-6 text-3xl">Inbox</h1>
+<div class="bg-gray-100 p-6 rounded-xl">
+    {% if conversations %}
+        <ul class="space-y-4">
+            {% for conversation in conversations %}
+                <li class="p-4 bg-white rounded-lg shadow hover:bg-gray-50">
+                    <a href="{% url 'conversation:detail' %}" class="text-lg font-semibold text-teal-500 hover:text-teal-700">
+                        Conversation with {{ conversation.other_user.username }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="text-gray-500">No conversations found.</p>
+    {% endif %}
+
+{% endblock %}
