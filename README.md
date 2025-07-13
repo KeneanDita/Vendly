@@ -4,43 +4,43 @@ Vendly is a modern e-commerce platform built with Django and styled using Tailwi
 
 ## Installation Instructions
 
-1. **Clone the repository**
+I started from 0 cause ya know like arrays
+
+0. **Clone the repository**
 
    ```bash
-<<<<<<< HEAD
    git clone https://github.com/keneandita/vendly.git
-=======
-   git clone https://github.com/yourusername/vendly.git
->>>>>>> remotes/origin/main
    cd vendly
    ```
 
-2. **Create a virtual environment**
+1. **Create a virtual environment**
 
    ```bash
    python -m venv env
-   source env/bin/activate  # On Windows use `env\Scripts\activate`
+   source env/bin/activate 
+   # On Windows use `.\env\Scripts\activate`
+   ```
 
-3. **Install dependencies**
+2. **Install dependencies**
 
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Apply migrations**
+3. **Apply migrations**
 
    ```bash
    python manage.py makemigrations
    python manage.py migrate
    ```
 
-5. **Create a superuser (for admin access)**
+4. **Create a superuser (for admin access)**
 
    ```bash
    python manage.py createsuperuser
    ```
 
-6. **Run the development server**
+5. **Run the development server**
 
    ```bash
    python manage.py runserver
@@ -55,8 +55,6 @@ Once the server is running:
 * Visit the homepage to browse available products
 * Register or log in to your account to manage your cart and place orders
 * Access the admin dashboard at `/admin/` to add products, view orders, and manage users
-
-Vendly is designed to be easily customizable, so you can adjust product categories, styles, and business rules to match your brand's needs.
 
 ## Contact
 
