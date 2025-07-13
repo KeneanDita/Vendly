@@ -1,0 +1,1 @@
+web: gunicorn vendly.wsgi:application
