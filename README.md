@@ -7,7 +7,11 @@ Vendly is a modern e-commerce platform built with Django and styled using Tailwi
 1. **Clone the repository**
 
    ```bash
+<<<<<<< HEAD
    git clone https://github.com/keneandita/vendly.git
+=======
+   git clone https://github.com/yourusername/vendly.git
+>>>>>>> remotes/origin/main
    cd vendly
    ```
 
