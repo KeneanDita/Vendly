@@ -27,11 +27,11 @@ SECRET_KEY = "django-insecure-h78t0rp$d4z+x_^$f@k+0icp3#*k+cu!h#y*=$fr@n1j4c2l*!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*', 'vendly.onrender.com']
+ALLOWED_HOSTS = ["*", "vendly.onrender.com"]
 
-LOGIN_URL = '/login/'
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = "/login/"
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
 
 
 # Application definition
@@ -47,11 +47,10 @@ INSTALLED_APPS = [
     "items",
     "conversation",
     "dashboard",
-    
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -126,15 +125,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = ["static/", 'item_images/']
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# Keep STATIC_URL as a string
+STATIC_URL = "/static/"
+
+# Add all static folders here
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    BASE_DIR / "item_images",
+    BASE_DIR / "item_images",  # your images folder
 ]
-MEDIA_URL = 'media/'
-MEIDA_ROOT = BASE_DIR/ 'media'
+
+
+MEDIA_URL = "/item_images/"  # URL to access images
+MEDIA_ROOT = BASE_DIR / "item_images"  # folder where images are stored
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
