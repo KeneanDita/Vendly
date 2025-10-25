@@ -6,3 +6,4 @@ core/migrations/__pycache__
 core/__pycache__
 items/migrations/__pycache__/
 items/__pycache__/
+static/
