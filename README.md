@@ -2,6 +2,12 @@
 
 Vendly is a modern e-commerce platform built with Django and styled using Tailwind CSS. Designed for flexibility and performance, Vendly makes it easy to create a streamlined online store that delivers a fast and seamless shopping experience. Whether you're launching a small boutique or expanding an existing product catalog, Vendly provides the tools to manage your store efficiently and grow your business online.
 
+### [Docker image link](<https://hub.docker.com/repository/docker/keneandita/vendly/general>)
+
+- Working Screenshot
+
+![Screenshot of the demo](/Screen.png)
+
 ## Installation Instructions
 
 I started from 0 cause ya know like arrays
@@ -52,9 +58,9 @@ Vendly will be accessible at `http://localhost:8000`.
 
 Once the server is running:
 
-* Visit the homepage to browse available products
-* Register or log in to your account to manage your cart and place orders
-* Access the admin dashboard at `/admin/` to add products, view orders, and manage users
+- Visit the homepage to browse available products
+- Register or log in to your account to place orders, and contact sellers.
+- Access the admin dashboard at `/admin/` to add products, view orders, and manage users
 
 ## Contact
 
