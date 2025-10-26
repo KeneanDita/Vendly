@@ -6,17 +6,16 @@ services:
     command: >
       sh -c "python manage.py migrate &&
              python manage.py collectstatic --noinput &&
-             gunicorn core.wsgi:application --bind 0.0.0.0:8000"
+             python manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/app
       - sqlite_data:/app/db
-      - static_volume:/app/static
+      - static_volume:/app/staticfiles
       - media_volume:/app/media
     ports:
       - "8000:8000"
     environment:
       - DEBUG=False
-      - DATABASE_URL=sqlite:///db/db.sqlite3
     restart: unless-stopped
 
 volumes:
